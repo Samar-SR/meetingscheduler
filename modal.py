@@ -26,11 +26,11 @@ model = ChatGoogleGenerativeAI(
 
 
 @tool(description="You are a meeting scheduler")
-def meeting_scheduler(data: str, name: str) -> str:
+def add_event_to_calendar(data: str, name: str) -> str:
     return f"Your meeting is scheduled for {data}"
 
 
-tools = [meeting_scheduler]
+tools = [add_event_to_calendar]
 
 
 def chatting(message: str):
